@@ -15,7 +15,7 @@ Resources:
             Path: /newsurvey
           Type: Api
       Handler: survey.lambda_handler
-      Runtime: python2.7
+      Runtime: python3.9
     Type: AWS::Serverless::Function
   SurveySubmit:
     Properties:
@@ -35,7 +35,7 @@ Resources:
       - DynamoDBCrudPolicy:
           TableName:
             Ref: SurveyTable
-      Runtime: python2.7
+      Runtime: python3.9
     Type: AWS::Serverless::Function
   SurveyTable:
     Properties:
